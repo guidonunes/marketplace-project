@@ -2,11 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
 
-  #refactor the routes
-  #TODO: update actions: create, edit and update
-  resources :products, only: %i[index show create edit update]
-
-  resources :products, only: %i[destroy]
+  # refactor the routes
+  # TODO: update actions: create, edit and update
+  resources :products
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
