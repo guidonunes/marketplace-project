@@ -1,4 +1,6 @@
 <h1>this is checkout's index</h1>
 <%= @checkouts.each do |checkout| %>
-  <%= checkout.product.item_name %>
+  <%= checkout.product %>
 <%end%>
+
+<%= link_to "back", root_path %>
