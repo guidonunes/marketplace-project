@@ -1,9 +1,8 @@
 <h1><%=Product.name%></h1>
 
 
-<div class="cards mb-4">
-  <% @products.each do |product|%>
-    <%= product.name%>
-    <%= product.description%>
-  <%end%>
-</div>
+
+    <%= @product.item_name%>
+    <%= @product.description%>
+
+<%= link_to "home", products_path %>
