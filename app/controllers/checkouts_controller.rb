@@ -1,4 +1,4 @@
-class CheckoutController < ApplicationController
+class CheckoutsController < ApplicationController
   before_action :authenticate_user!, :set_checkout, only: [:destroy, :show, :new]
 
   def new
