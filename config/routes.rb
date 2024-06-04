@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   resources :products do
+    collection do
+      get :my_products
+    end
     resources :checkouts, only: %i[new create]
   end
 

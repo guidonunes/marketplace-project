@@ -44,6 +44,10 @@ class ProductsController < ApplicationController
     redirect_to products_path, notice: 'Product was successfully destroyed.', status: :see_other
   end
 
+  def my_products
+    @products = Product.where(user: current_user)
+  end
+
   private
 
   def set_product
