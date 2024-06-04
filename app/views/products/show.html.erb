@@ -1,1 +1,9 @@
-<h1>This is the show</h1>
+<h1><%=Product.name%></h1>
+
+
+<div class="cards mb-4">
+  <% @products.each do |product|%>
+    <%= product.name%>
+    <%= product.description%>
+  <%end%>
+</div>
