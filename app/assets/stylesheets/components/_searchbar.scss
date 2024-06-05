@@ -1,0 +1,20 @@
+.search-container {
+  display: flex;
+  flex-direction: row; /* Change flex direction to row */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+
+
+
+.search-bar-color {
+  background: $light-yellow;
+}
+
+input {
+  border: none;
+  outline: none;
+  width: 100%;
+}

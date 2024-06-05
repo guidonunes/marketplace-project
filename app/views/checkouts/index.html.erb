@@ -1,6 +1,12 @@
-<h1>this is checkout's index</h1>
-<%= @checkouts.each do |checkout| %>
-  <%= checkout.product %>
+<h1>My orders</h1>
+<ul>
+<% @checkouts.each do |checkout| %>
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text"><li><%= checkout.product.item_name %></li></p>
+  </div>
+</div>
 <%end%>
-
+</ul>
 <%= link_to "back", root_path %>

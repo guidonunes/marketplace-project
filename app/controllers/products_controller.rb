@@ -4,7 +4,11 @@ class ProductsController < ApplicationController
 
   # GET/ products
   def index
-    @products = Product.all
+    if params[:q].present?
+      @products = Product.where('item_name ILIKE ?', "%#{params[:q]}%" )
+    else
+      @products = Product.all
+    end
   end
 
   # GET/ products/:id
@@ -55,6 +59,6 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:item_name, :description, :price)
+    params.require(:product).permit(:item_name, :description, :price, :photo)
   end
 end

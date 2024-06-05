@@ -1,0 +1,49 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: $card-title;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+.footer {
+  background-color: $black;
+  color: $light-gray;
+  width: 100%;
+  padding: 20px 0;
+  line-height: normal;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+
+    .footer-link {
+      font-size: 20px;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        list-style-type: none;
+        margin-bottom: 10px;
+
+        &:hover {
+          color: $red;
+        }
+      }
+
+    }
+
+    .footer-title {
+      font-family: $card-title;
+    }
+  }
+}

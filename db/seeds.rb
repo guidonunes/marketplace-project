@@ -14,7 +14,7 @@ user = User.create!(first_name: "Julian", last_name: "Rodelo", date_of_birth: Da
 puts "user created"
 puts "creating products"
 10.times do
-  product = Product.new(item_name: Faker::Music.band, user: user)
+  product = Product.new(item_name: Faker::Music.band, user: user, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", price: rand(10000..200000))
   product.save!
 end
 puts "products created"
