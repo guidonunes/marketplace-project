@@ -1,6 +1,6 @@
 <div class="container">
   <div class="py-4">
-    <h2>Sign up</h2>
+    <h2 class="card-subtitle">Sign up</h2>
   </div>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -36,9 +36,11 @@
     </div>
 
     <div class="form-actions">
-        <%= f.button :submit, "Sign up", class: "btn-form text-center "%>
+        <%= f.button :submit, "Sign up", class: "btn-form text-center" %>
     </div>
   <% end %>
 
-  <%= render "devise/shared/links" %>
+  <div class="mt-3">
+    <%= link_to "Back to login", new_user_session_path, class: "btn btn-flat" %>
+  </div>
 </div>
