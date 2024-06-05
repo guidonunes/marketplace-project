@@ -11,6 +11,22 @@
   color: $light-gray;
 }
 
+.btn-form {
+  width: 400px;
+  font-family: $body-font;
+  color: $light-gray;
+  padding: 8px 24px;
+  border-radius: 12px;
+  background: $blue;
+  transition: background 0.3s ease;
+  font-family: $body-font;
+}
+
+.btn-form:hover {
+  background: $red;
+  color: $light-gray;
+}
+
 // .btn-search {
 //   padding: 10px 20px;
 //   background: $light-yellow;
@@ -19,6 +35,7 @@
 //   cursor: pointer;
 //   font-size: 16px;
 // }
+
 .btn-search {
   background: $yellow-abitdarker;
 }
