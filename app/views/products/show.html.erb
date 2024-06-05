@@ -11,17 +11,17 @@
       <h2 class="mb-3"><%= @product.item_name%></h2>
       <h1 class="my-3">¥ <%= @product.price %></h1>
       <h3 class="mb-5"><%= @product.description %></h3>
-      <%= link_to "Browse more Items", products_path, class:"btn-flat" %>
+      <%= link_to "Browse more Items", products_path, class:"btn btn-flat" %>
     </div>
 
     <div class="col-4 mx-1">
-      <h3 class="my-3"><strong>Frete Gratis ✈️</strong></h3>
+      <h3 class="my-3"><strong>Free shipping ✈️</strong></h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-      <h3 class="my-3"><strong>devolucao gratuita ➡💵😉</strong></h3>
+      <h3 class="my-3"><strong>Free exchanges ➡💵😉</strong></h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-      <h3 class="my-5"><strong>Estoque disponivel</strong></h3>
+      <h3 class="my-5"><strong>Item in stock</strong></h3>
 
-      <%= link_to "buy product", new_product_checkout_path(@product), class:"btn-flat" %>
+      <%= link_to "buy product", new_product_checkout_path(@product), class:"btn btn-flat" %>
 
     </div>
   </div>
