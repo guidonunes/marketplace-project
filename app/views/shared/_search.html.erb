@@ -1,0 +1,7 @@
+
+<div class="search-container">
+  <%= form_with url: products_path, method: :get do |f| %>
+    <input type="Search" id="query" name="q" placeholder="Search product" class="search-bar-color">
+    <%= f.submit 'Search', class: 'btn btn-search'%>
+  <% end %>
+</div>
