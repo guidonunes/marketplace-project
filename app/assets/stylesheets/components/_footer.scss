@@ -34,11 +34,12 @@ html, body {
       li {
         list-style-type: none;
         margin-bottom: 10px;
+
+        &:hover {
+          color: $red;
+        }
       }
 
-      &:hover {
-        color: $red;
-      }
     }
 
     .footer-title {
