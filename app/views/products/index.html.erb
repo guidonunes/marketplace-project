@@ -11,10 +11,14 @@
   <div class="row m-5">
     <% @products.each do |product| %>
       <div class="card col-4 mb-3 mx-auto card-product" style="width: 24rem">
-        <img src= <%=asset_path('wear_tadayori.jpg')%> class="card-img-top mt-3" alt="product banner">
-          <div class="card-body d-flex justify-content-between">
-            <h5 class="p-4"><%= link_to product.item_name, product_path(product)%></h5>
-          </div>
+        <% if product.photo.attached? %>
+          <%= cl_image_tag product.photo.key , class: 'card-img-top mt-3' %>
+        <% else %>
+          <%= image_tag 'wear_tadayori.jpg' , class: 'card-img-top mt-3' %>
+        <% end %>
+        <div class="card-body d-flex justify-content-between">
+          <h5 class="p-4"><%= link_to product.item_name, product_path(product)%></h5>
+        </div>
     </div>
     <% end %>
   </div>
