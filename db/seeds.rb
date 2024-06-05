@@ -9,7 +9,7 @@
 #   end
 require 'faker'
 puts "creating user"
-user = User.create!(first_name: "Julian", last_name: "Rodelo", date_of_birth: Date.new(1990, 01, 01) , email: "juli@gmail.com", password: "123456")
+user = User.create!(first_name: "Julian", last_name: "Rodelo", date_of_birth: Date.new(1990, 1, 1) , email: "juli@gmail.com", password: "123456")
 
 puts "user created"
 puts "creating products"
