@@ -1,0 +1,48 @@
+body {
+  background-color: $yellow;
+  color: $black;
+}
+
+.card-title {
+  margin: 0;
+  color: $black;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 42px;
+  font-weight: bold;
+  font-family: $card-title;
+}
+
+.card-subtitle {
+  font-family: $card-title;
+}
+
+
+.card-product {
+  overflow: hidden;
+  box-shadow: 0 0 15px #00000033;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-align: center;
+  border-radius: 12px;
+  transition: transform .2s;
+  background-color: $light-gray;
+  color: $black;
+
+  &:hover {
+      transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+}
+
+.card-img-top {
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00000033;
+}
+
+.card-index-title {
+  color: $black;
+  font-size: 24px;
+  font-weight: bold;
+
+  &:hover {
+    color: $red;
+  }
+}

@@ -1,12 +1,25 @@
 
 <%= render "layouts/banner" %>
 
-  <% @products.each do |product| %>
-   <li> <%= link_to product.item_name, product_path(product)%> </li>
-<% end %>
-</ul>
+<h2 class="card-title text-center mt-5">Get yourself ready to face your foes!</h2>
+<h3 class="card-subtitle text-center mb-5">Browse our wares: </h3>
+<br>
 
-<%= link_to "Do you have a product for sale", new_product_path, class: "btn btn-flat "%>
+<div class="card-container">
+  <div class="row m-5">
+    <% @products.each do |product| %>
+      <div class="card col-4 mb-3 mx-auto card-product" style="width: 24rem">
+        <img src= <%=asset_path('wear_tadayori.jpg')%> class="card-img-top mt-3" alt="product banner">
+          <div class="card-body d-flex justify-content-between">
+            <h5 class="p-4"><%= link_to product.item_name, product_path(product)%></h5>
+          </div>
+    </div>
+    <% end %>
+  </div>
+</div>
 
 
-<%= link_to "my products", my_products_products_path, class: "btn btn-flat"%>
+<%= link_to "Wanna sell your wares?", new_product_path, class: "btn btn-flat "%>
+
+
+<%= link_to "My products", my_products_products_path, class: "btn btn-flat"%>
