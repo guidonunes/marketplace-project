@@ -1,2 +1,13 @@
-<h1>new from checkout</h1>
-<%= link_to "checkout now",  product_checkouts_path(@product),data:{turbo_method: :post} %>
+<div class="container">
+  <h1>checkout</h1>
+  <div class="d-flex justify-content-between bg-secundary my-3">
+    <div class="col-4 mx-1" >
+      <%= image_tag 'wear_tadayori.jpg', size:"400x500" %>
+    </div>
+  <div class="col-7 mx-4">
+  <h2><%= @product.item_name %></h2>
+  <h4> ¥ <%= @product.price %></h4>
+    </div>
+  </div>
+<%= link_to "Check your orders",  product_checkouts_path(@product),data:{turbo_method: :post} %>
+</div>
