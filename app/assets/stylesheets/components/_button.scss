@@ -10,3 +10,18 @@
   background: $red;
   color: $light-gray;
 }
+
+.btn-form {
+  width: 250px;
+  color: $light-gray;
+  padding: 8px 24px;
+  border-radius: 12px;
+  background: $blue;
+  transition: background 0.3s ease;
+  font-family: $body-font;
+}
+
+.btn-form:hover {
+  background: $red;
+  color: $light-gray;
+}
