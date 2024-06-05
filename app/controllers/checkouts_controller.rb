@@ -1,20 +1,19 @@
-class CheckoutController < ApplicationController
-  before_action :authenticate_user!, :set_checkout, only: [:destroy, :show, :new]
+class CheckoutsController < ApplicationController
+  before_action :set_checkout, only: [:destroy, :show]
+  before_action :set_product, only: [:new, :create]
 
   def new
     @checkout = Checkout.new
-    @product = Product.find(params[:product_id])
   end
 
   def create
     @checkout = Checkout.new
-    product = Product.find(params[:product_id])
     user = current_user
-    @checkout.product = product
+    @checkout.product = @product
     @checkout.user = user
 
     if @checkout.save
-      redirect_to new_product_checkouts_path(@product)
+      redirect_to checkouts_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -36,5 +35,9 @@ class CheckoutController < ApplicationController
 
   def set_checkout
     @checkout = Checkout.find(params[:id])
+  end
+
+  def set_product
+    @product = Product.find(params[:product_id])
   end
 end
