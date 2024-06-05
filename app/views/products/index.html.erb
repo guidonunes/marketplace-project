@@ -18,8 +18,8 @@
         <% end %>
         <div class="card-body">
           <div class="d-flex justify-content-between align-items-center mb-3">
-            <h5 class="mb-0"><%= link_to product.item_name, product_path(product), class: "text-style-none" %></h5>
-            <h3 class="mb-0"><%= product.price %></h3>
+            <h5 class="mb-0"><%= link_to product.item_name, product_path(product)  %></h5>
+            <h3 class="mb-0">¥<%= product.price %></h3>
           </div>
           <p><%= product.description %></p>
         </div>
