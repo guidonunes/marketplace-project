@@ -1,9 +1,26 @@
-<h1><%=Product.name%></h1>
+<h1><%=@product.item_name%></h1>
+
+<div class="d-flex justify-content-between bg-secundary my-3">
+  <div class="col-4 mx-1" >
+    <%= image_tag 'wear_tadayori.jpg', size:"400x500" %>
+  </div>
 
 
+  <div class="col-4 mx-1" >
+    <h2 class="mb-3"><%= @product.item_name%></h2>
+    <h1 class="my-3">¥ <%= @product.price %></h1>
+    <h3 class="mb-5"><%= @product.description %></h3>
+    <%= link_to "Browse more Items", products_path, class:"btn-flat" %>
+  </div>
 
-    <%= @product.item_name%>
-    <%= @product.description%>
+  <div class="col-4 mx-1">
+    <h3 class="my-3"><strong>Frete Gratis ✈️</strong></h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+    <h3 class="my-3"><strong>devolucao gratuita ➡💵😉</strong></h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+    <h3 class="my-5"><strong>Estoque disponivel</strong></h3>
 
-<%= link_to "home", products_path %>
-<%= link_to "buy product", new_product_checkout_path(@product) %>
+    <%= link_to "buy product", new_product_checkout_path(@product), class:"btn-flat" %>
+
+  </div>
+</div>
