@@ -20,7 +20,8 @@
 
 .nav-link {
   color: $light-gray;
-  font-size: 20px;
+  font-size: 24px;
+  font-family: $card-title;
 
   &:hover {
     color: $red;
