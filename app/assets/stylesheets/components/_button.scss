@@ -10,3 +10,18 @@
   background: $red;
   color: $light-gray;
 }
+
+// .btn-search {
+//   padding: 10px 20px;
+//   background: $light-yellow;
+//   border-color: $yellow;
+//   border-radius: 5px;
+//   cursor: pointer;
+//   font-size: 16px;
+// }
+.btn-search {
+  background: $yellow-abitdarker;
+}
+.btn-search:hover {
+  background: $yellowdark;
+}
