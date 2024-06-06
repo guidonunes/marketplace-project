@@ -46,3 +46,38 @@ body {
     color: $red;
   }
 }
+
+.card-selling-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-selling-product .img {
+  height: 100%;
+  width: 120px;
+  object-fit: contain;
+}
+
+.card-selling-product .h3 {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-selling-product p {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-selling-product .card-product-infos {
+  padding: 16px;
+}
