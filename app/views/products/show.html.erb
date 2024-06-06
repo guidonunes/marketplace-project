@@ -23,8 +23,10 @@
       <p class="product-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
       <br>
       <h3 class="info-header my-5"><strong>Item in stock <i class="fa-solid fa-box-open fa-bounce"></i></strong></h3>
-
-      <%= link_to "Buy product", new_product_checkout_path(@product), class:"btn btn-search-product" %>
+      <div class="button-container-1">
+      <span class="mas">buy product</span>
+    <button id='work' type="button" name="Hover"><%= link_to "Buy product", new_product_checkout_path(@product)%></button>
+  </div>
     </div>
   </div>
 </div>
