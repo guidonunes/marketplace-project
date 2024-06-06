@@ -1,20 +1,22 @@
 .search-container {
   display: flex;
-  flex-direction: row; /* Change flex direction to row */
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center the form within the container */
+  width: 100%; /* Ensure the container takes full width */
   margin-bottom: 10px; /* Adjust margin as needed */
+  margin-top: 10px;
 }
 
-
-
-
-.search-bar-color {
-  background: $light-yellow;
+.search-form {
+  display: flex; /* Use flexbox to align input and button */
+  width: 100%; /* Ensure the form takes full width of the container */
+  max-width: 600px; /* Optional: Set a maximum width for the form */
 }
 
-input {
+.search-bar {
+  flex-grow: 1; /* Allow the input to grow and fill available space */
   border: none;
   outline: none;
-  width: 100%;
+  padding: 10px; /* Add padding for better aesthetics */
+  font-size: 20px; /* Adjust font size */
+  font-family: $card-title;
 }

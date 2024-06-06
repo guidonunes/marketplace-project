@@ -27,18 +27,19 @@
   color: $light-gray;
 }
 
-// .btn-search {
-//   padding: 10px 20px;
-//   background: $light-yellow;
-//   border-color: $yellow;
-//   border-radius: 5px;
-//   cursor: pointer;
-//   font-size: 16px;
-// }
 
 .btn-search {
   background: $yellow-abitdarker;
+  border: none; /* Remove border for cleaner look */
+  padding: 10px 20px; /* Add padding for better aesthetics */
+  cursor: pointer;
+  font-size: 20px; /* Adjust font size */
+  height: auto; /* Ensure button height matches input height */
+  display: flex; /* Ensure button content is centered */
+  align-items: center; /* Center button content vertically */
+  font-family: $card-title;
 }
+
 .btn-search:hover {
   background: $yellowdark;
 }

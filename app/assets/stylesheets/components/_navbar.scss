@@ -20,15 +20,22 @@
 
 .nav-link {
   color: $light-gray;
-  font-size: 24px;
+  font-size: 20px;
   font-family: $card-title;
 
   &:hover {
-    color: $red;
+    color: $yellow-abitdarker;
   }
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
   border-radius: 50%;
+}
+
+.p-text {
+  font-family: $brand-font;
+  font-size: 24px;
+  color: $light-gray;
+  margin-left: 12px;
 }
