@@ -80,14 +80,12 @@ body {
   padding: 16px;
 }
 
-
 .card-order-summary {
   height: 260px;
   background: $pearl-light;
   align-items: center;
   border-radius: 4px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-
 }
 
 .card-order-summary p {
@@ -101,5 +99,8 @@ body {
 }
 
 .card-img-top {
+  width: 100%; /* Make the image take up the full width of its container */
+  height: 320px; /* Set a fixed height for the image */
+  object-fit: cover; /* Ensure the image covers the entire area without stretching */
   border-radius: 4px;
 }
