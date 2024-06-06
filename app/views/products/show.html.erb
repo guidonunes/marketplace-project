@@ -1,28 +1,28 @@
-<h1><%=@product.item_name%></h1>
-
-<div class="container-fluid">
+<div class="container-fluid my-5">
   <div class="d-flex justify-content-between bg-secundary my-3">
-    <div class="col-4 mx-1" >
+    <div class="col-4 mx-1">
       <%= image_tag 'wear_tadayori.jpg', size:"400x500" %>
     </div>
 
-
-    <div class="col-4 mx-1" >
-      <h2 class="mb-3"><%= @product.item_name%></h2>
-      <h1 class="my-3">¥ <%= @product.price %></h1>
-      <h3 class="mb-5"><%= @product.description %></h3>
-      <%= link_to "Browse more Items", products_path, class:"btn btn-flat" %>
+    <div class="col-4 mx-1">
+      <h2 class="product-header mb-2 fw-bold"><%= @product.item_name%></h2>
+      <h1 class="product-header mb-5">¥ <%= @product.price %></h1>
+      <h3 class="product-text mb-5"><%= @product.description %></h3>
+      <div class="col-auto"> <!-- Add col-auto class -->
+        <%= link_to "Browse more items", products_path, class:"btn btn-search btn-sm" %>
+      </div>
     </div>
 
     <div class="col-4 mx-1">
-      <h3 class="my-3"><strong>Free shipping ✈️</strong></h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-      <h3 class="my-3"><strong>Free exchanges ➡💵😉</strong></h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-      <h3 class="my-5"><strong>Item in stock</strong></h3>
-
-      <%= link_to "buy product", new_product_checkout_path(@product), class:"btn btn-flat" %>
-
+      <h3 class="info-header my-3"><strong>Free shipping</strong></h3>
+      <p class="product-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <a href="#" class="view-more">View more</a>
+      <h3 class="info-header my-3"><strong>Free exchanges</strong></h3>
+      <p class="product-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <div class="col-auto"> <!-- Add col-auto class -->
+        <%= link_to "buy product", new_product_checkout_path(@product), class:"btn btn-search btn-sm" %>
+      </div>
+      <h3 class="info-header my-5"><strong>Item in stock!</strong></h3>
     </div>
   </div>
 </div>
