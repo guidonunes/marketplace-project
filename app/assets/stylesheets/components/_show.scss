@@ -1,6 +1,25 @@
+.product-container {
+  margin-left: 64px;
+  margin-right: 64px;
+}
+
+.product-subcontainer {
+  margin-top: 64px;
+  margin-bottom: 64px;
+
+}
+
+.product-image {
+  width: 80%; /* Make the image take up the full width of its container */
+  height: 500px; /* Set a fixed height for the image */
+  object-fit: cover;
+  border-radius: 12px; /* Ensure the image covers the entire area without stretching */
+}
+
+
 .product-header {
   font-family: $card-title;
-  font-size: 48px;
+  font-size: 36px;
 }
 
 .product-text {
@@ -11,10 +30,4 @@
 .info-header {
   font-family: $card-title;
   font-size: 36px;
-}
-
-.view-more {
-  color: blue; /* Change the color as needed */
-  text-decoration: underline; /* Underline the link */
-  font-weight: bold; /* Make the text bold */
 }
