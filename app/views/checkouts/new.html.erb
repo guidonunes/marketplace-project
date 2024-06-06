@@ -1,22 +1,20 @@
-<div class="container">
-  <h1>Congrats on your order!</h1>
-  <div class="d-flex justify-content-between bg-secundary my-3">
-    <div class="col-4 mx-1" >
-      <% if @product.photo.attached? %>
-          <%= cl_image_tag product.photo.key, class: 'card-img-top mt-3' %>
-        <% else %>
-          <%= image_tag 'wear_tadayori.jpg', class: 'card-img-top mt-3' %>
-        <% end %>
+<div class="checkout-container">
+  <div class="checkout-subcontainer-checkout d-flex flex-column align-items-center bg-secundary p-4 mb-5">
+    <h1 class="mb-3 mt-3">Congrats on your order!</h1>
+    <% if @product.photo.attached? %>
+      <%= cl_image_tag @product.photo.key, class: "product-image-checkout mb-4" %>
+    <% else %>
+      <%= image_tag 'no_image.jpg', class: "product-image-checkout mb-4" %>
+    <% end %>
+
+    <div class="text-center mb-4">
+      <h2 class="product-header brand-font"><strong><%= @product.item_name %></strong></h2>
+      <h4 class="product-header">¥ <%= @product.price %></h4>
+      <p class="product-text"><%= @product.description %></p>
     </div>
 
-    <div class="col-4 mx-1">
-      <h2 class="brand-font"><%= @product.item_name %></h2>
-      <h4> ¥ <%= @product.price %></h4>
-      <h4 class="card-subtitle"><%= @product.description %></h4>
-    </div>
-
-    <div>
-      <%= link_to "Check your orders", product_checkouts_path(@product), data:{turbo_method: :post}, class:"btn btn-flat" %>
+    <div class="w-50 d-flex justify-content-center">
+      <%= link_to "Check your orders", product_checkouts_path(@product), data: {turbo_method: :post}, class: "btn btn-search-product" %>
     </div>
   </div>
 </div>
