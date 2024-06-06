@@ -1,13 +1,18 @@
 body {
-  background-color: $yellow;
+  background-color: $pearl;
   color: $black;
+}
+
+.container-custom {
+  padding-left: 4rem; /* Increase the padding as needed */
+  padding-right: 4rem; /* Increase the padding as needed */
 }
 
 .card-title {
   margin: 0;
   color: $black;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 42px;
+  font-size: 32px;
   font-weight: bold;
   font-family: $card-title;
 }
@@ -16,25 +21,18 @@ body {
   font-family: $card-title;
 }
 
-
 .card-product {
   overflow: hidden;
   box-shadow: 0 0 15px #00000033;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   text-align: center;
-  border-radius: 12px;
   transition: transform .2s;
   background-color: $light-gray;
   color: $black;
 
   &:hover {
-      transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transform: scale(1.05); /* Slight zoom effect on hover */
   }
-}
-
-.card-img-top {
-  border-radius: 12px;
-  box-shadow: 0 0 15px #00000033;
 }
 
 .card-index-title {
@@ -45,4 +43,39 @@ body {
   &:hover {
     color: $red;
   }
+}
+
+.card-selling-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-selling-product .img {
+  height: 100%;
+  width: 120px;
+  object-fit: contain;
+}
+
+.card-selling-product .h3 {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-selling-product p {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-selling-product .card-product-infos {
+  padding: 16px;
 }

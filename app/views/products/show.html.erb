@@ -1,25 +1,28 @@
-<h1><%=@product.item_name%></h1>
 
-<div class="container-fluid">
+<div class="container py-5">
   <div class="d-flex justify-content-between bg-secundary my-3">
     <div class="col-4 mx-1" >
-      <%= image_tag 'wear_tadayori.jpg', size:"400x500" %>
+       <% if @product.photo.attached? %>
+          <%= cl_image_tag @product.photo.key, width: 400, height: 400, gravity: "auto" %>
+        <% else %>
+            <%= image_tag 'wear_tadayori.jpg'%>
+        <% end %>
     </div>
 
 
     <div class="col-4 mx-1" >
-      <h2 class="mb-3"><%= @product.item_name%></h2>
-      <h1 class="my-3">¥ <%= @product.price %></h1>
+      <h1 class="mb-3"><%= @product.item_name%></h1>
+      <h2 class="my-3">¥ <%= @product.price %></h2>
       <h3 class="mb-5"><%= @product.description %></h3>
       <%= link_to "Browse more Items", products_path, class:"btn btn-flat" %>
     </div>
 
     <div class="col-4 mx-1">
-      <h3 class="my-3"><strong>Free shipping ✈️</strong></h3>
+      <h3 class="my-3"><strong>Free shipping <i class="fa-solid fa-plane fa-rotate-by" style="color: #000000; --fa-rotate-angle: 340deg;"></i></strong></h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-      <h3 class="my-3"><strong>Free exchanges ➡💵😉</strong></h3>
+      <h3 class="my-3"><strong>Free exchanges <i class="fa-solid fa-truck-fast" style="color: #000000;"></i></strong></h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-      <h3 class="my-5"><strong>Item in stock</strong></h3>
+      <h3 class="my-5"><strong>Item in stock <i class="fa-solid fa-box-open" style="color: #000000;"></i></strong></h3>
 
       <%= link_to "buy product", new_product_checkout_path(@product), class:"btn btn-flat" %>
 

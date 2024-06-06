@@ -22,3 +22,24 @@
   font-family: $body-font;
 }
 
+.btn-form:hover {
+  background: $red;
+  color: $light-gray;
+}
+
+
+.btn-search {
+  background: $yellow-abitdarker;
+  border: none; /* Remove border for cleaner look */
+  padding: 10px 20px; /* Add padding for better aesthetics */
+  cursor: pointer;
+  font-size: 20px; /* Adjust font size */
+  height: auto; /* Ensure button height matches input height */
+  display: flex; /* Ensure button content is centered */
+  align-items: center; /* Center button content vertically */
+  font-family: $card-title;
+}
+
+.btn-search:hover {
+  background: $yellowdark;
+}
