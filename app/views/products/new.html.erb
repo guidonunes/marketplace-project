@@ -1,5 +1,10 @@
-<h1>This is the new View </h1>
+<div class="container">
 
-<%= render "form", product: @product %>
+  <div class="pt-4 pb-1">
+    <h1>Create your new product</h1>
+  </div>
 
-<%= link_to 'Homepage', root_path, class: "btn btn-flat" %>
+  <%= render "form", product: @product %>
+
+  <%= link_to 'Back to home', root_path, class: "btn btn-search mt-3 mb-5" %>
+</div>

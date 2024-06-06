@@ -34,7 +34,7 @@ class CheckoutsController < ApplicationController
   private
 
   def set_checkout
-    @checkout = Checkout.find(params[:id])
+    @checkout = Checkout.find(params[:format])
   end
 
   def set_product
