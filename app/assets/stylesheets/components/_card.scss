@@ -79,3 +79,27 @@ body {
 .card-selling-product .card-product-infos {
   padding: 16px;
 }
+
+
+.card-order-summary {
+  height: 260px;
+  background: $pearl-light;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+}
+
+.card-order-summary p {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  font-family: $card-title;
+}
+
+.card-img-top {
+  border-radius: 4px;
+}
