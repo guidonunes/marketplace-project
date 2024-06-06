@@ -1,17 +1,20 @@
 <%= render "layouts/banner" %>
 
+<div class="container">
+  <div class="d-flex justify-content-end">
+    <%= link_to "Wanna sell your wares?", new_product_path, class: "btn btn-search m-3 fw-bold"%>
+    <%= link_to "My products", my_products_products_path, class: "btn btn-search m-3 fw-bold"%>
+  </div>
+</div>
+
 <h2 class="card-title text-center mt-5">Get yourself ready to face your foes!</h2>
-<h3 class="card-subtitle text-center mb-5">Browse our wares: </h3>
+<h3 class="card-subtitle text-center mb-2">Browse our wares: </h3>
 <br>
 
 
 
 <div class="container-custom">
-  <div class="d-flex justify-content-end">
-    <%= link_to "Wanna sell your wares?", new_product_path, class: "btn btn-search m-3 fw-bold"%>
-    <%= link_to "My products", my_products_products_path, class: "btn btn-search m-3 fw-bold"%>
-  </div>
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 mt-5 mb-5">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 mt-4 mb-5">
     <% @products.each do |product| %>
       <div class="col">
         <div class="card h-100 card-product">
