@@ -62,8 +62,7 @@
   background: $yellowdark;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
-@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
 
 @mixin button($bcolor,
 $url,
@@ -80,20 +79,6 @@ $col) {
  color: $col;
 }
 
-.header {
- text-align: center;
- font-family: 'Roboto', sans-serif;
- font-size: 34px;
- margin-top: 12vh;
-}
-
-.footer {
- text-align: center;
- font-family: 'Lato', sans-serif;
- font-weight: 300;
- font-size: 20px;
- margin-top: 15vh;
-}
 
 .button-container-1 {
  position: relative;
@@ -104,8 +89,8 @@ $col) {
  margin-top: 6vh;
  overflow: hidden;
  border: 1px solid;
- font-family: 'Lato', sans-serif;
- font-weight: 300;
+ font-family: $card-title;
+ font-weight: 200;
  font-size: 20px;
  transition: 0.5s;
  letter-spacing: 1px;
@@ -114,11 +99,10 @@ $col) {
  button {
   width: 101%;
   height: 100%;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  font-size: 11px;
+  font-family: $card-title;
+  font-weight: 200;
+  font-size: 12px;
   letter-spacing: 1px;
-  font-weight: bold;
 
   @include button(#000,
   "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png",
@@ -242,7 +226,7 @@ $col) {
 }
 
 a{
-  color: $pearl;
+  color: $yellow-abitdarker;
   text-decoration: none;
 }
 
