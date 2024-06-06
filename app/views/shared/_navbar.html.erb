@@ -4,45 +4,39 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="logo-container">
-      <%= link_to "#", class: "navbar-brand" do %>
+
+
+
+    <div class="d-flex justify-content-center">
+      <div class="logo-container mt-3">
+      <%= link_to root_path, class: "navbar-brand" do %>
         <p class="p-text"><%= image_tag "logo.jpeg" %>Bushido</p>
       <% end %>
     </div>
-
-    <div class="collapse navbar-collapse d-flex flex-column align-items-center" id="navbarSupportedContent">
-      <% if user_signed_in? %>
-        <div class="search-container mb-3 search-bar-color">
-          <%= render "shared/search" %> <!-- Make sure this partial includes the input and button -->
-        </div>
-      <% end %>
-
-      <ul class="navbar-nav me-auto w-100 justify-content-center">
+      <div class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", root_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item active">
-            <%= link_to "Checkout", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item active">
+           <div class="collapse navbar-collapse d-flex align-items-center" id="navbarSupportedContent">
+           <div class="nav-item active">
+          <div class="search-container mb-3 search-bar-color">
+            <%= render "shared/search" %> <!-- Make sure this partial includes the input and button -->
+          </div>
+          </div>
+          <div class="nav-item active">
             <%= link_to "Categories", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item active">
-            <%= link_to "Sellers", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item active">
+          </div>
+          <div class="nav-item active">
              <%= link_to "My Products", my_products_products_path, class: "nav-link" %>
-          </li>
-           <li class="nav-item active">
-              <%= link_to "Log out", destroy_user_session_path, data: { "turbo-method": :delete }, class: "nav-link" %>
-          </li>
+          </div>
+           <div class="nav-item active">
+              <%= link_to "Log out", destroy_user_session_path, class: "nav-link" %>
+          </div>
+    </div>
         <% else %>
-          <li class="nav-item">
+          <div class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
+          </div>
         <% end %>
-      </ul>
+      </div>
     </div>
   </div>
 </div>
