@@ -1,0 +1,41 @@
+.product-image {
+  width: 80%; /* Adjust to ensure it fits the container properly */
+  height: 500px; /* Set a consistent height */
+  object-fit: cover; /* Ensure the image covers the entire area without stretching */
+  border-radius: 12px; /* Apply a consistent border radius */
+}
+
+.product-image-checkout {
+  width: 30%; /* Adjust to ensure it fits the container properly */
+  height: 500px; /* Set a consistent height */
+  object-fit: cover; /* Ensure the image covers the entire area without stretching */
+  border-radius: 12px; /* Apply a consistent border radius */
+}
+
+.checkout-container {
+  .checkout-subcontainer-checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $pearl; // Replace with your secondary background color
+    padding: 2rem; // Add padding for spacing
+  }
+
+  .checkout-image {
+    width: 80%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem; // Add margin to space out elements
+  }
+
+  .text-center {
+    text-align: center;
+    margin-bottom: 2rem; // Add margin to space out elements
+  }
+
+  .btn-flat {
+    display: inline-block;
+    margin-top: 1rem; // Add margin to separate from other elements
+  }
+}

@@ -9,22 +9,22 @@
     </div>
 
     <div class="col-4 mx-1">
-      <h2 class="product-header"><strong><%= @product.item_name%></strong></h2>
+      <h2 class="product-header"><strong><%= @product.item_name %></strong></h2>
       <h3 class="product-header mb-3">¥ <%= @product.price %></h3>
       <p class="product-text mb-5"><%= @product.description %></p>
-      <%= link_to "Back Home", products_path, class:"btn btn-search-product" %>
+      <%= link_to "Back Home", products_path, class: "btn btn-search-product" %>
     </div>
 
     <div class="col-4 ml-5">
       <h3 class="info-header my-3"><strong>Free shipping <i class="fa-solid fa-plane fa-rotate-by" style="color: #000000; --fa-rotate-angle: 340deg;"></i></strong></h3>
-      <p class="product-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <p class="product-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
       <br>
       <h3 class="info-header my-3"><strong>Free exchanges <i class="fa-solid fa-truck-fast" style="color: #000000;"></i></strong></h3>
-      <p class="product-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <p class="product-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
       <br>
       <h3 class="info-header my-5"><strong>Item in stock <i class="fa-solid fa-box-open fa-bounce"></i></strong></h3>
 
-      <%= link_to "Buy product", new_product_checkout_path(@product), class:"btn btn-search-product" %>
+      <%= link_to "Buy product", new_product_checkout_path(@product), class: "btn btn-search-product" %>
     </div>
   </div>
 </div>
