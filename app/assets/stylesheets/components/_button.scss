@@ -63,6 +63,25 @@
 }
 
 
+.btn-search-orders {
+  background: $yellow-abitdarker;
+  border: none; /* Remove border for cleaner look */
+  padding: 10px 20px; /* Add padding for better aesthetics */
+  cursor: pointer;
+  font-size: 20px; /* Adjust font size */
+  height: auto;
+  width: 15%; /* Ensure button height matches input height */
+  display: flex; /* Ensure button content is centered */
+  align-items: center; /* Center button content vertically */
+  justify-content: center; /* Center button content horizontally */
+  font-family: $card-title;
+}
+
+.btn-search-orders:hover {
+  background: $yellowdark;
+}
+
+
 
 @mixin button($bcolor,
 $url,
