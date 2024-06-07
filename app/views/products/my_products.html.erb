@@ -3,23 +3,31 @@
     <h1>My selling products</h1>
   </div>
 
-<div class="row">
-  <% @products.each do |product| %>
-    <div class="col-4 mb-3 mx-4" style="width: 24rem;">
-      <div class="card-selling-product my-5">
+  <div class="row">
+    <% @products.each do |product| %>
+      <div class="col-4 mb-3 mx-4" style="width: 24rem;">
+        <div class="card-selling-product my-5 d-flex justify-content-between">
+          <div class="d-flex">
+            <% if product.photo.attached? %>
+              <%= cl_image_tag product.photo.key, width: 120, height: 120, gravity: "auto" %>
+            <% else %>
+                <%= image_tag 'no_image.jpg', width: 120, height: 120, gravity: "auto"%>
+            <% end %>
 
-        <% if product.photo.attached? %>
-          <%= cl_image_tag product.photo.key, width: 120, height: 120, gravity: "auto" %>
-        <% else %>
-            <%= image_tag 'wear_tadayori.jpg'%>
-        <% end %>
+            <div class="card-product-infos">
+              <h3><%= link_to product.item_name, product_path(product), class: "h3" %></h3>
+              <p>¥<%= product.price %></p>
+            </div>
+          </div>
 
-        <div class="card-product-infos">
-          <h3><%= link_to product.item_name, product_path(product), class: "h3" %></h3>
-          <p>¥<%= product.price %></p>
+          <div class="d-flex mt-5">
+            <%= link_to product_path(product), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: "btn" do  %>
+              <i class="fa-regular fa-trash-can"></i>
+            <% end %>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+  <%= link_to "Back Home", products_path, class: "btn btn-search-product my-4" %>
 </div>
