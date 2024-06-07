@@ -26,7 +26,9 @@
               <h3 class="mb-0">¥<%= product.price %></h3>
             </div>
             <p><%= product.description %></p>
-            <i class="cart-icon fa-solid fa-cart-plus d-flex justify-content-end me-3"></i>
+            <%= link_to new_product_checkout_path(product) do %>
+              <i class="cart-icon fa-solid fa-cart-plus d-flex justify-content-end me-3"></i>
+            <% end %>
           </div>
         </div>
       </div>
