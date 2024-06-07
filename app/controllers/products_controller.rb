@@ -4,10 +4,9 @@ class ProductsController < ApplicationController
 
   # GET/ products
   def index
+    @products = Product.where(visible: true)
     if params[:q].present?
-      @products = Product.where('item_name ILIKE ?', "%#{params[:q]}%" )
-    else
-      @products = Product.all
+      @products = @products.where('item_name ILIKE ?', "%#{params[:q]}%")
     end
   end
 
@@ -44,12 +43,13 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    @product.destroy!
-    redirect_to products_path, notice: 'Product was successfully destroyed.', status: :see_other
+    @product.visible = false
+    @product.save!
+    redirect_to my_products_products_path, notice: 'Product was successfully destroyed.', status: :see_other
   end
 
   def my_products
-    @products = Product.where(user: current_user)
+    @products = Product.where(user: current_user, visible: true)
   end
 
   private
