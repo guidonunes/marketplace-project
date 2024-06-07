@@ -1,6 +1,8 @@
 <div class="search-container">
   <%= form_with url: products_path, method: :get, class: "search-form" do |f| %>
     <input type="search" id="query" name="q" placeholder="Search a product" class="search-bar">
-    <%= f.submit 'Search', class: 'btn-search'%>
+    <%= f.button class: 'btn-search' do %>
+      <i class="fa-solid fa-magnifying-glass"></i>
+    <% end %>
   <% end %>
 </div>
