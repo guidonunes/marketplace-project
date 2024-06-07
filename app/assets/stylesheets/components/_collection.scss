@@ -1,0 +1,52 @@
+.cyber-container {
+  margin-top: 20px; // Adjust margin as needed
+}
+
+.cyber-container img {
+  position: relative; // Ensure the image is positioned relative to its container
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, filter 0.2s; // Add filter transition for smooth effect
+
+  &::before {
+    content: ""; // Create a pseudo-element for the overlay
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); // Black layer with 30% opacity
+    border-radius: 8px; // Match the border radius of the image
+    transition: opacity 0.2s; // Add opacity transition for smooth effect
+    opacity: 0; // Initially hidden
+  }
+
+  &:hover::before {
+    opacity: 1; // Show the black layer on hover
+  }
+
+  &:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    filter: brightness(1.4); // Increase brightness on hover
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card-title {
+  text-align: center; /* Correct syntax for text alignment */
+  margin: 5rem; /* Correct syntax for setting margins */
+  animation: heartbeat 1.5s infinite; /* Apply heartbeat animation to the card-title */
+}
