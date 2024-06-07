@@ -1,0 +1,40 @@
+.order-card-product {
+  overflow: hidden;
+  height: 120px;
+  background: $pearl;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.order-card-img-top {
+  height: 100%;
+  width: 164px;
+  object-fit: cover;
+}
+
+.order-card-product-infos {
+  padding: 16px;
+}
+
+.order-card-product h2 {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: $card-title;
+  margin: 0;
+}
+
+.order-card-product p {
+  font-size: 20px;
+  font-family: $card-title;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product-subheader {
+  font-family: $card-title;
+  font-size: 20px;
+}

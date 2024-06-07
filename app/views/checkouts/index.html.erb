@@ -1,30 +1,25 @@
-<div class="container align-items-center">
-
-  <%= link_to "Back to home", root_path, class:"btn btn-flat mt-4"%>
-
-  <div class="text-center mt-5">
-    <h1 >My orders</h1>
+<div class="container align-items-center mb-5">
+  <div class="d-flex justify-content-end mt-4">
+    <%= link_to "Back to home", root_path, class: "btn btn-search-orders mt-5" %>
   </div>
 
-  <div class="row">
-    <% @checkouts.each do |checkout| %>
-      <div class="col-4 mb-3 mx-4" style="width: 24rem;">
-        <div class="card-order-summary">
+  <div class="text-center mt-3">
+    <h1 class="mt-5">My orders</h1>
+    <p class=" card-product-subheader mb-5">Review your purchase history below.</p>
+    </div>
 
-        <div class="card-order-summary my-5">
-          <% if checkout.product.photo.attached? %>
-            <%= cl_image_tag checkout.product.photo.key, class: 'card-img-top' %>
-          <% else %>
-            <%= image_tag 'wear_tadayori.jpg', class: 'card-img-top' %>
-          <% end %>
+  <% @checkouts.each do |checkout| %>
+    <div class="order-card-product mb-3">
+      <% if checkout.product.photo.attached? %>
+        <%= cl_image_tag checkout.product.photo.key, class: 'order-card-img-top' %>
+      <% else %>
+        <%= image_tag 'no_image.jpg', class: 'order-card-img-top' %>
+      <% end %>
 
-          <p class="card-text text-center"><%= checkout.product.item_name %></p>
-
-        </div>
-        </div>
-
+      <div class="order-card-product-infos">
+        <h2><%= checkout.product.item_name %></h2>
+        <p>Product description with <strong>relevant info</strong> only.</p>
       </div>
-    <%end%>
-
-  </div>
+    </div>
+  <% end %>
 </div>
