@@ -104,3 +104,12 @@ body {
   object-fit: cover; /* Ensure the image covers the entire area without stretching */
   border-radius: 4px;
 }
+
+.cart-icon {
+  font-size: 24px;
+  transition: transform .2s;
+
+  &:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+}
